@@ -1,0 +1,52 @@
+div.page {
+    &.author {
+        div.author-info-parent {
+            margin-top: -60px;
+            margin-bottom: 75px;
+            @include border-radius($border-radius);
+            padding: 30px;
+            background: $white;
+            @include default-box-shadow();
+
+            div.author-info {
+                vertical-align: top;
+
+                h3 {
+                    margin: 0 0 10px 0;
+                }
+
+                h4 {
+                    margin: 0;
+                }
+            }
+
+            div.author-institute-logos {
+                padding-top: 30px;
+
+                img {
+                    &:not(:first-child) {
+                        margin-left: 70px;
+                    }
+
+                    width: auto;
+                    height: 70px;
+                }
+            }
+        }
+
+        div.author-products-title {
+            h4 {
+                display: inline-block;
+                margin-bottom: 50px;
+                border-bottom: 3px $blue solid;
+                padding-bottom: 5px;
+            }
+        }
+
+        div.author-products {
+            > div {
+                padding: 20px;
+            }
+        }
+    }
+}

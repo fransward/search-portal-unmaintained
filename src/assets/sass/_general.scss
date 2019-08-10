@@ -1,0 +1,60 @@
+body {
+    position: relative;
+    font-family: $font-source-sans-pro;
+    font-size: 15px;
+    color: $grey1;
+    line-height: 2;
+    background: $white;
+    overflow-x: hidden;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: $font-bitter;
+        font-weight: 400;
+        line-height: 1.3;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    h5 {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    a {
+        border-bottom: 1px transparent solid;
+        color: $blue;
+        text-decoration: none;
+
+        &:focus,
+        &:hover,
+        &:active {
+            border-color: $blue;
+            color: $blue;
+            text-decoration: none;
+        }
+    }
+
+    p {
+        &:empty {
+            margin: 0;
+        }
+    }
+}

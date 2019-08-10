@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'surf';
+    src: url('assets/fonts/surf/surf.eot?68559238');
+    src: url('assets/fonts/surf/surf.eot?68559238#iefix') format('embedded-opentype'),
+             url('assets/fonts/surf/surf.woff2?68559238') format('woff2'),
+             url('assets/fonts/surf/surf.woff?68559238') format('woff'),
+             url('assets/fonts/surf/surf.ttf?68559238') format('truetype'),
+             url('assets/fonts/surf/surf.svg?68559238#surf') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reusable for custom 'content' properties */
+$iconcode-cc-sa: '\e800';
+$iconcode-cc-public-domain: '\e801';
+$iconcode-cc-nd: '\e802';
+$iconcode-cc-nc-jp: '\e803';
+$iconcode-cc-nc-eu: '\e804';
+$iconcode-cc-nc: '\e805';
+$iconcode-cc-by: '\e806';
+$iconcode-cc: '\e807';
+$iconcode-star-open: '\e808';
+$iconcode-search: '\e809';
+$iconcode-star: '\e80a';
+$iconcode-plus: '\e80b';
+$iconcode-minus: '\e80c';
+$iconcode-listview: '\e80d';
+$iconcode-link: '\e80e';
+$iconcode-heart: '\e80f';
+$iconcode-eye: '\e810';
+$iconcode-download: '\e811';
+$iconcode-check: '\e812';
+$iconcode-cardview: '\e813';
+$iconcode-calendar: '\e814';
+$iconcode-arrow-down: '\e815';
+$iconcode-funnel: '\e816';
+
+.icon {
+    &:before {
+        display: inline-block;
+        font-family: 'surf';
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        text-decoration: inherit;
+        width: 1em;
+        text-align: center;
+     
+        /* For safety - reset parent styles, that can break glyph codes*/
+        font-variant: normal;
+        text-transform: none;
+
+        /* fix buttons height, for twitter bootstrap */
+        line-height: 1em;
+
+        /* Font smoothing. That was taken from TWBS */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    &.icon-cc-sa:before { content: $iconcode-cc-sa; }
+    &.icon-cc-public-domain:before { content: $iconcode-cc-public-domain; }
+    &.icon-cc-nd:before { content: $iconcode-cc-nd; }
+    &.icon-cc-nc-jp:before { content: $iconcode-cc-nc-jp; }
+    &.icon-cc-nc-eu:before { content: $iconcode-cc-nc-eu; }
+    &.icon-cc-nc:before { content: $iconcode-cc-nc; }
+    &.icon-cc-by:before { content: $iconcode-cc-by; }
+    &.icon-cc:before { content: $iconcode-cc; }
+    &.icon-star-open:before { content: $iconcode-star-open; }
+    &.icon-search:before { content: $iconcode-search; }
+    &.icon-star:before { content: $iconcode-star; }
+    &.icon-plus:before { content: $iconcode-plus; }
+    &.icon-minus:before { content: $iconcode-minus; }
+    &.icon-listview:before { content: $iconcode-listview; }
+    &.icon-link:before { content: $iconcode-link; }
+    &.icon-heart:before { content: $iconcode-heart; }
+    &.icon-eye:before { content: $iconcode-eye; }
+    &.icon-download:before { content: $iconcode-download; }
+    &.icon-check:before { content: $iconcode-check; }
+    &.icon-cardview:before { content: $iconcode-cardview; }
+    &.icon-calendar:before { content: $iconcode-calendar; }
+    &.icon-arrow-down:before { content: $iconcode-arrow-down; }
+    &.icon-funnel:before { content: $iconcode-funnel; }
+}

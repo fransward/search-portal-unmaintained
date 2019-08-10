@@ -1,0 +1,34 @@
+.awesomplete {
+    display: block;
+    position: static;
+
+    > ul {
+        @include border-radius(0, 0, $border-radius, $border-radius);
+        background: $white;
+        overflow: hidden;
+
+        > li {
+            cursor: pointer;
+            border-bottom: 1px dotted $grey1;
+            padding: 10px 15px;
+            color: $grey1;
+            font-weight: 700;
+            background: $white;
+
+            &:hover {
+                background: rgba($blue, 0.3);
+            }
+
+            &[aria-selected='true'] {
+                background: $blue;
+                color: $white;
+            }
+
+            mark {
+                color: inherit;
+                font-weight: 400;
+                background-color: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+footer {
+    padding: 100px 50px 50px 50px;
+    color: $white;
+    background: $blue;
+
+    @media screen and (max-width: $screen-sm) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    a {
+        color: inherit;
+
+        &:focus,
+        &:hover,
+        &:active {
+            color: inherit;
+            border-bottom-color: $white;
+        }
+    }
+
+    div.footer-quote-parent,
+    div.footer-text-parent {
+        margin-bottom: 50px;
+    }
+
+    div.footer-quote-parent {
+        padding-right: 100px;
+
+        h3.footer-quote {
+            &:before,
+            &:after {
+                content: '"';
+            }
+        }
+    }
+
+    div.footer-text-parent {
+        h2 {
+            img {
+                margin-right: 30px;
+                width: auto;
+                height: 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,142 @@
+div.page {
+    &.product {
+        div.product-info-parent {
+            margin-bottom: 50px;
+
+            div.product-author {
+                margin-bottom: 50px;
+
+                > div {
+                    position: relative;
+                    margin-top: -60px;
+                    @include border-radius($border-radius);
+                    padding: 20px;
+                    color: $grey4;
+                    background: $white;
+                    @include default-box-shadow();
+                    z-index: 2;
+
+                    div.product-type {
+                        margin-bottom: 30px;
+
+                        img {
+                            margin-right: 5px;
+                            height: 25px;
+                            vertical-align: middle;
+                        }
+                    }
+
+                    div.product-author-info {
+                        margin-bottom: 20px;
+                        padding-bottom: 30px;
+
+                        h4 {
+                            margin-bottom: 0;
+                            color: $blue;
+                        }
+
+                        p {
+                            font-size: 14px;
+                        }
+
+                        div.product-author-institute-logos {
+                            img {
+                                margin: 0 10px;
+
+                                width: auto;
+                                height: 45px;
+                            }
+                        }
+                    }
+
+                    div.product-contributors {
+                        line-height: 1;
+                    }
+
+                    div.product-meta {
+                        line-height: 1.5;
+
+                        a.product-tag {
+                            display: inline-block;
+                            margin: 0 5px 5px 0;
+                            @include border-radius($border-radius-small);
+                            padding: 7px 15px;
+                            color: $white;
+                            font-size: 14px;
+                            font-weight: 700;
+                            line-height: 1;
+                            text-align: center;
+                            background: $blue;
+
+                            &:focus,
+                            &:hover,
+                            &:active {
+                                background-color: $blue-hover;
+                            }
+                        }
+                    }
+                }
+            }
+
+            div.product-info {
+                div.product-info-header {
+                    margin-bottom: 30px;
+                    padding-top: 30px;
+                    padding-bottom: 20px;
+
+                    div.product-title {
+                        h3 {
+                            display: inline-block;
+                            margin: 0;
+                        }
+                    }
+
+                    div.product-licenses-download {
+                        margin-bottom: 30px;
+
+                        div.product-licenses {
+                            display: inline-block;
+                            margin-right: 30px;
+                            line-height: 1.2;
+                            vertical-align: top;
+
+                            span.license-icon {
+                                margin-right: 5px;
+                                font-size: 25px;
+                            }
+
+                            span.license-text {
+                                font-size: 14px;
+
+                                + span.license-text {
+                                    &:before {
+                                        content: ' - ';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                div.product-description {
+                    margin-bottom: 30px;
+                    padding-bottom: 20px;
+                }
+
+                a.product-download {
+                    span.icon {
+                        margin-right: 10px;
+                        font-size: 25px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+
+        div.related-products-parent {
+            div.related-product {
+                padding: 20px;
+            }
+        }
+    }
+}

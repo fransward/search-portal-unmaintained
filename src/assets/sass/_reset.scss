@@ -1,0 +1,92 @@
+body {
+    width: 100%;
+    height: 100%;
+    color: $black;
+    background: $white;
+
+    * {
+        margin: 0;
+        padding: 0;
+
+        &,
+        &:before,
+        &:after {
+            @include box-sizing(border-box);
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0 0 20px 0;
+        line-height: 100%;
+    }
+
+    p {
+        margin: 0 0 20px 0;
+    }
+
+    img {
+        border: none;
+        max-width: 100%;
+        vertical-align: bottom;
+    }
+
+    a {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            border: none;
+        }
+    }
+
+    ul,
+    ol {
+        margin: 0 0 20px 0;
+        padding: 0 0 0 40px;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    q,
+    blockquote {
+        quotes: none;
+        margin: 0 0 20px 0;
+
+        &:before,
+        &:after {
+            content: ' ';
+            content: none;
+        }
+    }
+
+    label {
+        cursor: pointer;
+        display: block;
+        @include disable-selection();
+    }
+
+    select {
+        cursor: pointer;
+    }
+
+    template {
+        display: none;
+    }
+
+    iframe {
+        max-width: 100%;
+    }
+}

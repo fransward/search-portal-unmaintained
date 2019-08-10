@@ -1,0 +1,160 @@
+@mixin border-radius($top-left, $top-right:'', $bottom-left:'', $bottom-right:'') {
+    @if $top-right == '' {
+        -webkit-border-radius: $top-left;
+        -moz-border-radius: $top-left;
+        border-radius: $top-left;
+    }
+
+    @else {
+        -webkit-border-top-left-radius: $top-left;
+        -webkit-border-top-right-radius: $top-right;
+        -webkit-border-bottom-left-radius: $bottom-left;
+        -webkit-border-bottom-right-radius: $bottom-right;
+        -moz-border-radius-topleft: $top-left;
+        -moz-border-radius-topright: $top-right;
+        -moz-border-radius-bottomleft: $bottom-left;
+        -moz-border-radius-bottomright: $bottom-right;
+        border-top-left-radius: $top-left;
+        border-top-right-radius: $top-right;
+        border-bottom-left-radius: $bottom-left;
+        border-bottom-right-radius: $bottom-right;
+    }
+}
+
+@mixin disable-selection() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin hyphenate() {
+    /*
+    Credits: Michael Scharnagl
+    Article: https://justmarkup.com/log/2015/07/31/dealing-with-long-words-in-css/
+    */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+@mixin grayscale($value) {
+    $ieValue: $value;
+    @if $value == 0 {
+        $ieValue: 'none';
+    }
+    @else {
+        $ieValue: 'gray';
+    }
+
+    filter: #{$ieValue}; /* IE6-9 */
+    filter: grayscale($value); /* Microsoft Edge and Firefox 35+ */
+    -webkit-filter: grayscale($value); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+
+    @-o-keyframes #{$name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin mask-image($url) {
+    -webkit-mask-image: url($url);
+    -o-mask-image: url($url);
+    -moz-mask-image: url($url);
+    mask-image: url($url);
+}
+
+@mixin mask-repeat($repeat) {
+    -webkit-mask-repeat: $repeat;
+    -o-mask-repeat: $repeat;
+    -moz-mask-repeat: $repeat;
+    mask-repeat: $repeat;
+}
+
+@mixin mask-position($position) {
+    -webkit-mask-position: $position;
+    -o-mask-position: $position;
+    -moz-mask-position: $position;
+    mask-position: $position;
+}
+
+@mixin mask-size($size) {
+    -webkit-mask-size: $size;
+    -o-mask-size: $size;
+    -moz-mask-size: $size;
+    mask-size: $size;
+}
+
+@mixin placeholder() {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+}
+
+@mixin default-box-shadow() {
+    @include box-shadow(0 5px 15px 5px rgba($black, 0.15));
+}
+
+@mixin default-box-shadow-wider() {
+    @include box-shadow(0 5px 15px 8px rgba($black, 0.15));
+}
+
+@mixin pagination-button() {
+    display: inline-block;
+    margin-left: 10px;
+    @include border-radius($border-radius);
+    border-color: transparent;
+    padding: 0 10px;
+    min-width: 30px;
+    height: 30px;
+    color: $grey1;
+    line-height: 30px;
+    text-align: center;
+    background: $white;
+
+    &:focus,
+    &:hover,
+    &:active {
+        background: $grey3;
+    }
+}
+
+@mixin pagination-button-active() {
+    color: $white;
+    font-weight: 700;
+    background: $blue;
+}

@@ -1,0 +1,11 @@
+/* Bootstrap */
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+$grid-columns: 60;
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+/* Awesomplete */
+@import '~awesomplete/awesomplete.base';
+@import 'vendors/awesomplete';
+
+/* FlatPickr */
+@import '~flatpickr/dist/flatpickr.min';

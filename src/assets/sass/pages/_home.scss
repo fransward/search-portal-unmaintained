@@ -1,0 +1,37 @@
+div.page {
+    &.home {
+        div.page-inner {
+            padding-bottom: 0;
+
+            div.search-bar-parent {
+                position: relative;
+                margin-top: -40px;
+                margin-bottom: 150px;
+                z-index: 2;
+            }
+
+            div.recently-added-parent {
+                margin-bottom: 100px;
+
+                @media screen and (max-width: $screen-sm) {
+                    margin-bottom: 50px;
+                }
+
+                div.recently-added {
+                    > div {
+                        padding: 20px;
+                    }
+                }
+            }
+
+            div.home-about {
+                @media screen and (max-width: $screen-sm) {
+                    margin-left: -5px;
+                    margin-right: -5px;
+                    padding: 30px 30px 130px 30px;
+                    background: $grey3;
+                }
+            }
+        }
+    }
+}
